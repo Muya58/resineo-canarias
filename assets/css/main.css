@@ -271,8 +271,15 @@ img { max-width: 100%; display: block; }
 
 /* Responsive */
 @media (max-width: 860px) {
-  .site-nav a:not(.btn) {
-    display: none;
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  .site-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13px;
   }
   .card-grid {
     grid-template-columns: 1fr;
