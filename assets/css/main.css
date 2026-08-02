@@ -115,7 +115,7 @@ img { max-width: 100%; display: block; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .45));
+  background: linear-gradient(180deg, rgba(0, 0, 0, .32), rgba(0, 0, 0, .55));
 }
 
 .hero-content {
@@ -129,7 +129,6 @@ img { max-width: 100%; display: block; }
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  opacity: .9;
   margin-bottom: 12px;
 }
 
