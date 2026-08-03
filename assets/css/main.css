@@ -279,6 +279,32 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
+/* Color & texture gallery */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.color-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.color-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 900 / 700;
+  object-fit: cover;
+}
+
+.color-card figcaption {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);
@@ -318,6 +344,9 @@ img { max-width: 100%; display: block; }
   }
   .photo-grid {
     grid-template-columns: 1fr;
+  }
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .hero-content h1 {
     font-size: 32px;
