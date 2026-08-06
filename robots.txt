@@ -4,4 +4,4 @@ Disallow: /privacidad.html
 Disallow: /aviso-legal.html
 Disallow: /cookies.html
 
-Sitemap: https://resineo-canarias.com/sitemap.xml
+Sitemap: https://resineocanarias.com/sitemap.xml
