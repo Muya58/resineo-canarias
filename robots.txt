@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /privacidad.html
-Disallow: /aviso-legal.html
-Disallow: /cookies.html
+Disallow: /privacidad
+Disallow: /aviso-legal
+Disallow: /cookies
 
 Sitemap: https://resineocanarias.com/sitemap.xml

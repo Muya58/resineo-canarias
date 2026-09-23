@@ -19,6 +19,13 @@ for (const page of ALL_PAGES) {
     assert.ok(html.includes('rel="canonical"'), `${page} is missing a canonical tag`);
   });
 
+  test(`${page} canonical URL has no .html extension (must match the cleanUrls-served URL, or Google flags a redirect error)`, () => {
+    const html = fs.readFileSync(page, 'utf8');
+    const match = html.match(/rel="canonical" href="([^"]+)"/);
+    assert.ok(match, `${page} is missing a canonical tag`);
+    assert.ok(!match[1].endsWith('.html'), `${page} canonical (${match[1]}) still ends in .html — it will redirect via cleanUrls and mismatch itself`);
+  });
+
   test(`${page} links to the CSS design tokens`, () => {
     const html = fs.readFileSync(page, 'utf8');
     assert.ok(html.includes('assets/css/tokens.css'), `${page} does not load tokens.css`);
@@ -28,8 +35,8 @@ for (const page of ALL_PAGES) {
 test('index.html has the full navigation to all interior pages', () => {
   const html = fs.readFileSync('index.html', 'utf8');
   const expectedLinks = [
-    'piscinas.html', 'suelos-terrazas.html', 'tecnologia.html',
-    'realizaciones.html', 'quienes-somos.html', 'contacto.html',
+    'piscinas', 'suelos-terrazas', 'tecnologia',
+    'realizaciones', 'quienes-somos', 'contacto',
   ];
   for (const link of expectedLinks) {
     assert.ok(html.includes(`href="${link}"`), `index.html nav is missing a link to ${link}`);
